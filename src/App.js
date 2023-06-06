@@ -1,9 +1,17 @@
-function App() {
+import React from "react";
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import styles from "./App.module.scss";
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>CookChef</h1>
+    <div className={`d-flex flex-column ${styles.appContainer}`}>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
