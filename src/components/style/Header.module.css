@@ -1,5 +1,3 @@
-@use "../assets/styles/mixins" as mixin;
-
 .header {
   position: relative;
   padding: 10px 20px;
@@ -7,13 +5,13 @@
   background-color: white;
   box-shadow: var(--box-shadow-nav);
   color: var(--primary);
-  img {
-    width: 130px;
-  }
+}
+.header img {
+  width: 130px;
 }
 
-.headerList {
-  @include mixin.xs {
+@media (max-width: 576px) {
+  .headerList {
     display: none;
   }
 }
@@ -22,10 +20,12 @@
   display: none !important;
   cursor: pointer;
   transition: opacity 0.2s;
-  &:hover {
-    opacity: 0.8;
-  }
-  @include mixin.xs {
+}
+.headerXs:hover {
+  opacity: 0.8;
+}
+@media (max-width: 576px) {
+  .headerXs {
     display: block !important;
   }
-}
+}/*# sourceMappingURL=Header.module.css.map */
